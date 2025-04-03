@@ -29,10 +29,36 @@ pipeline {
             }
             steps {
                 sh '''
+                    echo "Running tests to verify the application..."
                     test -f build/index.html
-                    npm test
+                    npm test -- --watchAll=false
                 '''
             }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
